@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Propagation</title>
+
+    <style>
+        .parentDiv{
+           border: 1.4px solid blue;
+           padding: 10px 5px;
+        }
+
+        .formInner{
+          border: 1.4px solid red;
+          padding: 10px 5px;
+          display: flex;
+          justify-content: center;
+        }
+
+        button{
+          padding: 10px 5px;
+          background-color: tomato;
+          color: white;
+          outline: none;
+          border: 1px solid tomato;
+          cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="parentDiv" id="parentDiv">
+        <form class="formInner" id="formInner">
+            <button id="eventfire">Event Fire</button>
+        </form>
+    </div>
+
+    <script src="new.js"></script>
+</body>
+
+</html>
