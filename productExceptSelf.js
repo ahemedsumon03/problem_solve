@@ -13,6 +13,8 @@ function productExceptSelf(nums) {
         }
     }
 
+    console.log(`prefix->${prefix}`);
+
     for (let i = nums.length - 1; i >= 0; i--) {
         if (i == nums.length - 1) {
             suffix[i] = 1;
@@ -20,6 +22,8 @@ function productExceptSelf(nums) {
             suffix[i] = nums[i + 1] * suffix[i + 1];
         }
     }
+
+    console.log(`suffix-> ${suffix}`);
 
     for (let i = 0; i < nums.length; i++) {
         result[i] = prefix[i] * suffix[i];
